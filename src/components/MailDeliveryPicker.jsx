@@ -148,7 +148,7 @@ export default function MailDeliveryPicker() {
 
   return (
     <div style={s.root}>
-      <div style={s.label}>Try it — Choose a delivery method</div>
+      <div style={s.label}> WIP Placeholder </div>
       <p style={s.prompt}>
         You are a letter. How do you get delivered?
       </p>
