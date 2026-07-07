@@ -17,6 +17,7 @@ This file will serve as the incremental README, and will contain latest updates,
 *  Main Menu Page
 *  Mail Era Interactive Page
 *  Main mdx
+*  Deployed Page - https://dmdlsu.github.io/virtual-exhibit-template/
 
 **To-Do**
 * Telephone Era Interactive Page
