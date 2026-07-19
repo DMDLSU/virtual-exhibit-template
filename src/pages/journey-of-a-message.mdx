@@ -6,7 +6,9 @@ readingTime: "15 minute read"
 ---
 
 import MailDeliveryPicker from "../components/MailDeliveryPicker.jsx"
-import SwitchboardCall from "../components/SwitchboardCall.jsx"
+import TelephoneEraInteractive from "../components/TelephoneEraInteractive.jsx"
+import InternetEraInteractive from "../components/InternetEraInteractive.jsx"
+import FiberOpticsInteractive from "../components/FiberOpticsInteractive.jsx"
 
 # Journey of a Message
 
@@ -54,7 +56,7 @@ Scaling this system was expensive. Each simultaneous call required its own dedic
 
 **System Limitations:** The network could only support as many simultaneous calls as there were physical wire paths. If you called and the other person did not pick up, the message was lost. There was no voicemail, no answering machine, and no callback record until the 1960s and 70s. Both parties had to be present at exactly the same time, making communication synchronous in a way that letters, at least, were not.
 
-<SwitchboardCall client:load />
+<TelephoneEraInteractive client:load />
 
 ---
 
@@ -68,6 +70,8 @@ Scaling this system was expensive. Each simultaneous call required its own dedic
 
 **System Limitations:** Narrow bandwidth and zero shared infrastructure availability (if someone picked up the physical house phone handset, the data stream was cut off immediately).
 
+<InternetEraInteractive client:load />
+
 ---
 
 ## The Fiber Optics Era
@@ -79,6 +83,8 @@ Scaling this system was expensive. Each simultaneous call required its own dedic
 **Network Architecture - Optical Wavelength Routing:** Instead of electronic routers processing data packet-by-packet at every physical junction (which causes processing latency), this architecture utilizes Wavelength Division Multiplexing (WDM). Network nodes use optical prisms and selective mirrors to route data streams based entirely on their light color (wavelength), allowing millions of distinct data paths to share a single physical glass line simultaneously without crossing streams.
 
 **System Limitations:** High deep-sea installation costs, physical vulnerability to commercial ship anchors, and the requirement for optoelectronic repeaters every 40–60 km to amplify fading light signals.
+
+<FiberOpticsInteractive client:load />
 
 ---
 

@@ -5,7 +5,7 @@
  * Users can start the interactive ride.
  */
 
-import { Link } from "react-router-dom";
+// Astro handles routing natively — no react-router-dom needed.
 
 const ERAS = [
   {
@@ -124,9 +124,9 @@ export default function MainMenu() {
         letters to today's wireless world.
       </p>
 
-      <Link to="/ride" style={s.startButton}>
+      <a href="/ride" style={s.startButton}>
         Start the Data Ride
-      </Link>
+      </a>
 
       <div style={s.section}>
         <div style={s.label}>Explore the Eras</div>
@@ -134,10 +134,10 @@ export default function MainMenu() {
         <ul style={s.list}>
           {ERAS.map((era) => (
             <li key={era.id}>
-              <Link to={`/${era.id}`} style={s.card}>
+              <a href={`/${era.id}`} style={s.card}>
                 <div style={s.title}>{era.title}</div>
                 <div style={s.description}>{era.description}</div>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
