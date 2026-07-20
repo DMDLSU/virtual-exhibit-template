@@ -82,7 +82,7 @@ export default function InternetEraInteractive() {
     connected:   { color: "#2a5c2a", text: "CONNECTED  48000 bps" },
     downloading: { color: "#2a5c2a", text: "Downloading..." },
     done:        { color: "#2a5c2a", text: "Download complete" },
-    interrupted: { color: "#882222", text: "NO CARRIER — phone was picked up" },
+    interrupted: { color: "#882222", text: "NO CARRIER: phone was picked up" },
   };
   const { color: statusColor, text: statusText } = statusMap[phase];
 
@@ -110,7 +110,7 @@ export default function InternetEraInteractive() {
         alignItems: "center",
         fontFamily: "Arial, sans-serif",
       }}>
-        <span>Dial-Up Connection Manager &mdash; 1998</span>
+        <span>Dial-Up Connection Manager  1998</span>
         <div style={{ display: "flex", gap: "2px" }}>
           {["_", "[]", "X"].map((c) => (
             <div key={c} style={{
@@ -146,7 +146,7 @@ export default function InternetEraInteractive() {
           fontFamily: "'Courier New', Courier, monospace",
         }}>
           {termLines.length === 0 && phase === "idle" && (
-            <span style={{ color: "#555" }}>AT &mdash; Ready</span>
+            <span style={{ color: "#555" }}>AT: Ready</span>
           )}
           {termLines.map((line, i) => (
             <div key={i} style={{ animation: "ie-fade 0.15s ease-out" }}>{line}</div>
@@ -156,7 +156,7 @@ export default function InternetEraInteractive() {
           )}
           {phase === "done" && (
             <div style={{ animation: "ie-fade 0.2s ease-out" }}>
-              Transfer complete &mdash; page.html saved.
+              Transfer complete. page.html saved.
             </div>
           )}
         </div>
@@ -170,7 +170,7 @@ export default function InternetEraInteractive() {
         {(phase === "downloading" || phase === "done") && (
           <div style={{ marginBottom: "0.5rem" }}>
             <div style={{ fontSize: "0.7rem", color: "#444", marginBottom: "3px" }}>
-              page.html &mdash; {downloadPct}% &mdash; approx.&nbsp;
+              page.html  {downloadPct}%  approx.&nbsp;
               {Math.max(0, Math.round((1 - downloadPct / 100) * 45))} sec remaining
             </div>
             <div style={{
@@ -189,7 +189,7 @@ export default function InternetEraInteractive() {
         {phase === "interrupted" && (
           <div style={{ background: "#fff8f8", border: "1px solid #c08080", padding: "0.5rem 0.65rem", fontSize: "0.78rem", color: "#661111", marginBottom: "0.5rem", animation: "ie-fade 0.2s" }}>
             Someone picked up the house phone. Dial-up shared the same copper wire as the telephone
-            line &mdash; any incoming call or off-hook handset immediately severed the data connection.
+            line: any incoming call or off-hook handset immediately severed the data connection.
           </div>
         )}
 

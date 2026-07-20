@@ -33,21 +33,6 @@ export default function TelephoneEraInteractive() {
     }}>
       <style>{css}</style>
 
-      {/* Header strip */}
-      <div style={{
-        borderBottom: "1px solid #c8c8c8",
-        padding: "0.6rem 1rem",
-        background: "#efefef",
-        fontSize: "0.68rem",
-        textTransform: "uppercase",
-        letterSpacing: "0.08em",
-        color: "#888",
-        display: "flex",
-        justifyContent: "space-between",
-      }}>
-        <span>The Telephone Era</span>
-        <span>Telephone Exchange &middot; circa 1910</span>
-      </div>
 
       <div style={{ padding: "1.25rem 1rem" }}>
 
@@ -75,7 +60,7 @@ export default function TelephoneEraInteractive() {
                 ? "Call connected"
                 : choice === "decline"
                 ? "No answer"
-                : "Incoming call — Mr. Watson, Line 2"}
+                : "Incoming call, Mr. Watson on Line 2"}
             </div>
             <div style={{ fontSize: "0.73rem", color: "#666" }}>
               {choice === "accept"
@@ -101,7 +86,7 @@ export default function TelephoneEraInteractive() {
             {/* Cord diagram */}
             <div style={{ marginBottom: "1rem" }}>
               <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#999", marginBottom: "5px" }}>
-                Patch cord &mdash; copper circuit
+                Patch cord, copper circuit
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.7rem", color: "#aaa" }}>
                 <span style={{ whiteSpace: "nowrap", color: "#444" }}>Your line</span>
@@ -113,7 +98,7 @@ export default function TelephoneEraInteractive() {
             </div>
 
             <p style={{ fontSize: "0.8rem", lineHeight: "1.65", color: "#222", borderLeft: "2px solid #bbb", paddingLeft: "0.75rem", margin: "0 0 0.75rem" }}>
-              <strong>Circuit Switching</strong> &mdash; one unbroken copper wire now connects both phones.
+              <strong>Circuit Switching</strong>: one unbroken copper wire now connects both phones.
               No other caller can use this line. The path is held open for the entire call,
               whether or not anyone speaks. When both parties hang up, the operator unplugs
               the cord and the circuit is released.
@@ -145,7 +130,7 @@ export default function TelephoneEraInteractive() {
               The line goes silent. In 1910 there is no voicemail, no missed-call log,
               no way to leave a message. Mr. Watson called at a specific moment in time
               and that moment is permanently gone. Both parties had to be present at exactly
-              the same instant &mdash; unlike a letter, which could wait.
+              the same instant. Unlike a letter, which could wait.
             </p>
 
             <table style={{ borderCollapse: "collapse", fontSize: "0.77rem", marginBottom: "0.75rem" }}>

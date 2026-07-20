@@ -52,19 +52,6 @@ export default function FiberOpticsInteractive() {
     }}>
       <style>{css}</style>
 
-      {/* Header strip */}
-      <div style={{
-        borderBottom: "1px solid #c4d0da",
-        padding: "0.6rem 1rem",
-        background: "#e4ecf2",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}>
-        <span style={{ fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "#6a8a9a" }}>
-          The Fiber Optics Era
-        </span>
-      </div>
 
       {/* Tab strip */}
       <div style={{ display: "flex", borderBottom: "1px solid #c4d0da", background: "#f0f4f7" }}>
@@ -168,7 +155,7 @@ export default function FiberOpticsInteractive() {
                 <text x="486" y="28" textAnchor="middle" fontSize="7" fill="#6a8a9a" fontFamily="Arial, sans-serif">DEMUX</text>
               </svg>
               <div style={{ fontSize: "0.65rem", color: "#9aaabb", marginTop: "4px", textAlign: "center" }}>
-                Single glass fiber strand &mdash; all wavelengths travel simultaneously
+                Single glass fiber strand - all wavelengths travel simultaneously
               </div>
             </div>
 
@@ -176,7 +163,7 @@ export default function FiberOpticsInteractive() {
             {active ? (
               <div style={{ fontSize: "0.78rem", color: "#4a6878", animation: "fo-fade 0.2s ease-out", borderLeft: "2px solid #c4d0da", paddingLeft: "0.75rem" }}>
                 <span style={{ color: active.color, fontFamily: "'Courier New', monospace" }}>{active.label}</span>
-                {" "}&mdash; {active.data}
+                {" "}- {active.data}
                 <br />
                 <span style={{ color: "#8aaabb" }}>Traveling at approximately 200,000 km/s through silica glass.</span>
               </div>
@@ -192,7 +179,7 @@ export default function FiberOpticsInteractive() {
         {view === "compare" && (
           <div style={{ animation: "fo-fade 0.2s ease-out" }}>
             <p style={{ fontSize: "0.8rem", color: "#4a6878", lineHeight: "1.65", margin: "0 0 1rem" }}>
-              Fiber's decisive advantage over copper is attenuation &mdash; how much signal is lost
+              Fiber's decisive advantage over copper is attenuation: how much signal is lost
               per distance. Copper loses 3 dB every 100 m. Fiber loses just 0.2 dB per kilometer,
               allowing spans of 80 km without a repeater.
             </p>
@@ -218,7 +205,7 @@ export default function FiberOpticsInteractive() {
 
             <p style={{ fontSize: "0.73rem", color: "#6a8a9a", marginTop: "0.75rem", lineHeight: "1.6" }}>
               A copper repeater is needed every 100 m. A single fiber repeater can span 80 km
-              of ocean floor &mdash; the distance from London to Oxford.
+              of ocean floor (the distance from London to Oxford).
             </p>
           </div>
         )}
