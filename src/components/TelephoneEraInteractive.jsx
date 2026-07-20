@@ -45,7 +45,7 @@ export default function TelephoneEraInteractive() {
         display: "flex",
         justifyContent: "space-between",
       }}>
-        <span>Interactive &mdash; The Telephone Era</span>
+        <span>The Telephone Era</span>
         <span>Telephone Exchange &middot; circa 1910</span>
       </div>
 

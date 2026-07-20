@@ -62,10 +62,7 @@ export default function FiberOpticsInteractive() {
         alignItems: "center",
       }}>
         <span style={{ fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "#6a8a9a" }}>
-          Interactive &mdash; The Fiber Optics Era
-        </span>
-        <span style={{ fontSize: "0.65rem", color: "#8aaabb" }}>
-          Pacific Ocean &middot; &minus;4,200 m depth
+          The Fiber Optics Era
         </span>
       </div>
 
@@ -225,22 +222,6 @@ export default function FiberOpticsInteractive() {
             </p>
           </div>
         )}
-      </div>
-
-      {/* Footer */}
-      <div style={{
-        borderTop: "1px solid #c4d0da",
-        padding: "0.35rem 1rem",
-        background: "#e4ecf2",
-        display: "flex",
-        justifyContent: "space-between",
-        fontSize: "0.62rem",
-        color: "#8aaabb",
-        fontFamily: "'Courier New', monospace",
-      }}>
-        <span>DEPTH: &minus;4,200 m</span>
-        <span>TEMP: 2&deg;C &middot; 415 atm</span>
-        <span>LOSS: 0.2 dB/km</span>
       </div>
     </div>
   );

@@ -62,7 +62,7 @@ export default function MailDeliveryPicker() {
         letterSpacing: "0.08em",
         color: "#888070",
       }}>
-        Interactive &mdash; The Mail Era
+        The Mail Era
       </div>
 
       <div style={{ padding: "1.25rem 1rem" }}>
