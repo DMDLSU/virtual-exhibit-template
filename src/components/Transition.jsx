@@ -11,7 +11,7 @@ export default function WarpTransition({ href, children }) {
 
     setTimeout(() => {
       window.location.href = href;
-    }, 700);
+    }, 2500);
   }
 
   return (
