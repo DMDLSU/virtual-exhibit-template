@@ -196,10 +196,12 @@ export default function FiberOpticsInteractive() {
                   setFiberOffset(0);
                   setCopperOffset(0);
             
-                  setTimeout(() => {
-                      setFiberOffset(400);
-                      setCopperOffset(400);
-                  }, 20);
+                  requestAnimationFrame(() => {
+                      requestAnimationFrame(() => {
+                          setFiberOffset(400);
+                          setCopperOffset(400);
+                      });
+                  });
               
                   setTimeout(() => {setWinner("Fiber reached the destination first.");}, 700);
                   }}
