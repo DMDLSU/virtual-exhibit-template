@@ -18,6 +18,9 @@ This project dives into the history of networking to show how humans have stayed
 *  Node.js
 *  React
 
+## Website Deployment Link
+https://dmdlsu.github.io/virtual-exhibit-template/
+
 
 ## Interactive Element: The Data Ride
 
