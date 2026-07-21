@@ -5,102 +5,21 @@ author: "Cubarrubias, Dion Mel; Encarnacion, Alessandro Gabriel; Evangelista, Ai
 readingTime: "15 minute read"
 ---
 
-import MailDeliveryPicker from "../components/MailDeliveryPicker.jsx"
-import TelephoneEraInteractive from "../components/TelephoneEraInteractive.jsx"
-import InternetEraInteractive from "../components/InternetEraInteractive.jsx"
-import FiberOpticsInteractive from "../components/FiberOpticsInteractive.jsx"
-import WifiEraInteractive from "../components/WifiEraInteractive.jsx"
+import ExhibitNav from "../components/ExhibitNav.astro"
 
-# Journey of a Message
+---
+
+## Journey of a Message
 
 Communication is the process of transmitting information from one person to another. Throughout history, humans have continuously developed new ways to communicate faster, farther, and more reliably. What once took weeks or months can now happen in a matter of milliseconds.
 
 In this exhibit, you will travel through six major eras of communication technology: handwritten letters carried by pigeons, early telephones, dial-up internet, fiber optic cables on the ocean floor, wireless networks, and what comes next. Along the way, you will see how each era solved the problems left behind by the one before it.
 
----
-
-## The Mail Era
-
-<h3>Physical</h3>
-
-Before electricity, all information was physical. A message existed only as ink on paper, and moving it from sender to receiver meant physically carrying that paper across the distance between them.
-
-**Core Medium:** Physical paper, carbon ink, and kinetic energy (human runners, horses, or birds).
-
-The earliest long-distance communication relied on dedicated human messengers. By the time of the Roman Empire, a system called the *cursus publicus* established relay stations every 10 to 15 miles along major roads. Riders would swap for fresh horses at each station, allowing messages to travel far faster than any single horse and rider could manage alone. This relay model is one of the earliest examples of what we might now call a network.
-
-For routes where speed mattered more than volume, homing pigeons were used. Pigeons navigate using a biological trait called magnetoreception. Specialized proteins in their eyes and microscopic iron-oxide particles in their beaks allow them to sense the Earth's geomagnetic field, giving them an internal compass permanently calibrated to their home roost. To use a pigeon, a sender first had to physically carry the bird away from its home. When a message needed to go back, a tiny rolled letter was attached to the bird's leg and it was released. It would fly back home (one way only) at speeds of up to 60 mph.
-
-Ships extended the reach of physical mail across oceans. A letter from London to New York by sailing ship took four to six weeks. Cargo ships carried mail bags alongside goods, and schedules were predictable enough that organized postal services built timetables around them.
-
-**System Limitations:** Every message required the physical medium to complete the entire journey. If the pigeon was intercepted by a hawk, the letter was gone. If the ship sank, it was gone. There was no confirmation of receipt, no way to send a copy, and no way to recover a lost message. Delivery times were measured in days, weeks, or months depending on distance. Communication was strictly one-way at a time; a letter sent did not guarantee a reply arrived.
-
-<MailDeliveryPicker client:load />
-
----
-
-## The Telephone Era
-
-<h3>Analog Circuit-Switched</h3>
-
-The invention of the telegraph in the 1830s marked the first time information could travel faster than the physical object carrying it. Instead of moving paper, the telegraph converted text into electrical pulses (dots and dashes in Morse Code) that traveled along copper wires at the speed of electricity.
-
-**Core Medium:** Conductive copper wires, iron telegraph lines, and manual physical switchboards.
-
-The telephone, developed in the 1870s, took this further. Rather than encoding text into pulses, the telephone converted the continuous sound of a human voice into a continuous electrical signal. Speaking into a carbon microphone compressed carbon granules packed inside it, which changed the microphone's electrical resistance. That change in resistance produced a matching change in electrical current, which traveled down the wire. At the receiving end, an electromagnet converted those current variations back into physical vibrations, recreating the original sound.
-
-This shift from discrete pulses (telegraph) to continuous analog waveforms (telephone) was significant. For the first time, two people could have a real-time conversation across hundreds of miles.
-
-**Network Architecture - Circuit Switching:** Early telephone networks did not route calls automatically. Every call required a human operator sitting at a switchboard. When you picked up the phone, you would tell the operator the number or name of the person you were trying to reach. The operator would then physically plug a patch cable between your line's jack and the recipient's jack, completing an unbroken copper path between the two phones. This is called circuit switching: a dedicated physical connection is held open for the entire duration of the call, and released only when both parties hang up.
-
-Scaling this system was expensive. Each simultaneous call required its own dedicated wire path. As telephone use grew, the number of wires running between cities became enormous. Long-distance lines suffered from attenuation (signal weakening over distance) and crosstalk, where signals leaked between adjacent wires and callers could hear fragments of other conversations.
-
-**System Limitations:** The network could only support as many simultaneous calls as there were physical wire paths. If you called and the other person did not pick up, the message was lost. There was no voicemail, no answering machine, and no callback record until the 1960s and 70s. Both parties had to be present at exactly the same time, making communication synchronous in a way that letters, at least, were not.
-
-<TelephoneEraInteractive client:load />
-
----
-
-## The Internet Era
-
-<h3>Digital Packet-Switched & Dial-Up</h3>
-
-**Core Medium:** Standard twisted-pair copper telephone lines repurposed to carry digital computer data.
-
-**Network Architecture - Packet Switching:** This era marked the historic migration away from rigid Circuit Switching to Packet Switching. Instead of locking down an entire physical line for a single connection, files were broken down into tiny, independent digital data packets. Each packet contained routing headers, traveled dynamically across disparate network pathways, and was reassembled in its correct order upon reaching the destination CPU.
-
-**System Limitations:** Narrow bandwidth and zero shared infrastructure availability (if someone picked up the physical house phone handset, the data stream was cut off immediately).
-
-<InternetEraInteractive client:load />
-
----
-
-## The Fiber Optics Era
-
-<h3>High-Bandwidth Guided Media</h3>
-
-**Core Medium:** Strands of ultra-pure silica glass (thinner than a human hair) bundled inside armored submarine cables lying on the ocean floor.
-
-**Network Architecture - Optical Wavelength Routing:** Instead of electronic routers processing data packet-by-packet at every physical junction (which causes processing latency), this architecture utilizes Wavelength Division Multiplexing (WDM). Network nodes use optical prisms and selective mirrors to route data streams based entirely on their light color (wavelength), allowing millions of distinct data paths to share a single physical glass line simultaneously without crossing streams.
-
-**System Limitations:** High deep-sea installation costs, physical vulnerability to commercial ship anchors, and the requirement for optoelectronic repeaters every 40–60 km to amplify fading light signals.
-
-<FiberOpticsInteractive client:load />
-
----
-
-## The Wi-Fi Era
-
-<h3>Wireless Communication</h3>
-
-The development of Wi-Fi and mobile networks made it possible to send and receive information without physical cables. Instead of traveling through dedicated wires, data is transmitted using radio waves, allowing smartphones, laptops, and other wireless devices to stay connected while on the move.
-
-**Core Medium:** Radio waves, Wi-Fi routers, wireless access points, and cellular towers.
-
-Wi-Fi routers convert digital data into radio signals that nearby devices can receive and transmit back. These devices exchange data wirelessly while the router forwards the information through an internet connection, typically backed by high-speed fiber optic networks. Mobile Data technologies such as 4G and 5G extend this connectivity beyond homes and offices, where routers are stationed, allowing users to communicate almost anywhere with network coverage.
-
-Wireless networking has enabled real-time communication such as messaging, video calls, online gaming, cloud services, and media streaming. It also supports billions of Internet of Things (IoT) devices, including smart home appliances, wearable technology, and connected sensors.
-
-**System Limitations:** Wireless performance depends on signal strength, interference, and network congestion. Obstacles like walls or long distances can weaken signals, and reliable communication still requires access to a Wi-Fi network or cellular service.
-
-<WifiEraInteractive client:load />
+<ExhibitNav 
+  currentChapter={0} 
+  totalChapters={5} 
+  prevUrl="/virtual-exhibit-template" 
+  prevTitle="All Exhibits" 
+  nextUrl="./exhibit/01-mail" 
+  nextTitle="The Mail Era" 
+/>
