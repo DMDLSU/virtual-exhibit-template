@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/warp.css";
 
-export default function WarpTransition({ href, children }) {
+export default function WarpTransition({ href, destination, children }) {
   const [warp, setWarp] = useState(false);
 
   function travel(e) {
@@ -22,13 +22,19 @@ export default function WarpTransition({ href, children }) {
 
       {warp && (
         <div className="warp">
-          {Array.from({ length: 35 }).map((_, i) => (
+
+          <div className="warp-text">
+              <div className="small">Traveling to</div>
+              <div className="big">{destination}</div>
+          </div>
+          
+          {Array.from({ length: 50 }).map((_, i) => (
             <span
               key={i}
               className="star"
               style={{
                 top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 0.2}s`
+                animationDelay: `${Math.random() * 0.3}s`
               }}
             />
           ))}
