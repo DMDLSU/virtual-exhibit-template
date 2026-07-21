@@ -24,7 +24,7 @@ export default function WarpTransition({ href, destination, children }) {
         <div className="warp">
 
           <div className="warp-text">
-              <div className="small">Traveling...</div>
+              <div className="small">Traveling to</div>
               <div className="big">{destination}</div>
           </div>
           
