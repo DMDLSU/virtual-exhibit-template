@@ -15,7 +15,7 @@ const { prevUrl, prevTitle, nextUrl, nextTitle, currentChapter, totalChapters } 
 <nav class="exhibit-nav">
   <div class="nav-button prev-container">
     {prevUrl && (
-      <WarpTransition client:load href={prevUrl}>
+      <WarpTransition client:load href={prevUrl} destination={prevTitle}>
       <div class="nav-link prev">
         <span class="label">← Previous</span>
         <span class="title">{prevTitle}</span>
@@ -31,7 +31,7 @@ const { prevUrl, prevTitle, nextUrl, nextTitle, currentChapter, totalChapters } 
 
   <div class="nav-button next-container">
     {nextUrl && (
-      <WarpTransition client:load href={nextUrl}>
+      <WarpTransition client:load href={nextUrl} destination={nextTitle}>
       <div class="nav-link next">
         <span class="label">Next →</span>
         <span class="title">{nextTitle}</span>
