@@ -200,7 +200,7 @@ export default function FiberOpticsInteractive() {
                   }, 10);
               
                   setTimeout(() => {setWinner("Fiber reached the destination first.");}, 700);
-
+                  }}
             
                   style={{
                       padding:"0.45rem .9rem",
