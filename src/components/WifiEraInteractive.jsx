@@ -217,8 +217,8 @@ function ChannelTab() {
           <div style={{ fontSize: ".78rem", fontFamily: SANS, color: SUB, borderLeft: `2px solid ${col}`, paddingLeft: ".65rem", lineHeight: "1.65", animation: "wf-fade .15s" }}>
             <strong style={{ color: col }}>Channel {c.ch} ({c.band})</strong>
             {c.nets === 0
-              ? " — No competing networks detected. Ideal channel; your router owns the airtime."
-              : ` — ${c.nets} other network${c.nets > 1 ? "s" : ""} on this channel. Each one uses the same radio frequency in the same space, causing collisions that force all devices to back off and retry.`}
+              ? " No competing networks detected. Ideal channel — your router owns the airtime."
+              : ` ${c.nets} other network${c.nets > 1 ? "s" : ""} share this channel. Each one uses the same radio frequency in the same space, causing collisions that force all devices to back off and retry.`}
           </div>
         );
       })() : (

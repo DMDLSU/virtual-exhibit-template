@@ -7,10 +7,10 @@
 import { useState } from "react";
 
 const WAVELENGTHS = [
-  { id: "w1", color: "#b04458", label: "L1  1530 nm", data: "Video stream — Tokyo to London" },
-  { id: "w2", color: "#a07030", label: "L2  1550 nm", data: "Financial data — NYSE to LSE" },
-  { id: "w3", color: "#3a7a96", label: "L3  1570 nm", data: "Voice calls — 8,000 channels" },
-  { id: "w4", color: "#3a7a58", label: "L4  1590 nm", data: "CDN cache — streaming data" },
+  { id: "w1", color: "#b04458", label: "L1  1530 nm", data: "Video stream: Tokyo to London" },
+  { id: "w2", color: "#a07030", label: "L2  1550 nm", data: "Financial data: NYSE to LSE" },
+  { id: "w3", color: "#3a7a96", label: "L3  1570 nm", data: "Voice calls: 8,000 channels" },
+  { id: "w4", color: "#3a7a58", label: "L4  1590 nm", data: "CDN cache: streaming data" },
 ];
 
 const COMPARE = [
