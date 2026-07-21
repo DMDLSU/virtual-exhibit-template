@@ -1,0 +1,32 @@
+.warp{
+    position:fixed;
+    inset:0;
+    background:black;
+    overflow:hidden;
+    z-index:99999;
+}
+
+.star{
+    position:absolute;
+    left:-100px;
+
+    width:80px;
+    height:2px;
+
+    background:white;
+    opacity:.8;
+
+    animation:fly .7s linear forwards;
+}
+
+@keyframes fly{
+
+    from{
+        transform:translateX(0) scaleX(.3);
+    }
+
+    to{
+        transform:translateX(130vw) scaleX(6);
+    }
+
+}
