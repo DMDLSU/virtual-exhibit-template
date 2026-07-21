@@ -219,7 +219,7 @@ export default function TelephoneEraInteractive() {
           <RingerDisplay ringing={ringing} />
           <div>
             <div style={{ fontSize: "0.92rem", fontWeight: "700", color: CREAM, marginBottom: "3px", fontFamily: "'Libre Baskerville', serif" }}>
-              {isAccepted ? "Circuit connected" : isDeclined ? "No answer" : "Incoming call — Mr. Watson, Line 2"}
+              {isAccepted ? "Circuit connected" : isDeclined ? "No answer" : "Incoming call, Mr. Watson, Line 2"}
             </div>
             <div style={{ fontSize: "0.72rem", color: IVORY, fontFamily: "'Source Code Pro', monospace", letterSpacing: "0.03em" }}>
               {isAccepted
