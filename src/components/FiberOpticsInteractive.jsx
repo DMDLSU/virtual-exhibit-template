@@ -39,8 +39,7 @@ export default function FiberOpticsInteractive() {
   const [activeWl, setActiveWl] = useState(null);
   const [pulseKey, setPulseKey] = useState(0);
   const [view, setView] = useState("wdm");
-  const [fiberOffset, setFiberOffset] = useState(0);
-  const [copperOffset, setCopperOffset] = useState(0);
+  const [raceKey, setRaceKey] = useState(0);
   const [winner, setWinner] = useState("");
 
   function sendPulse(id) {
@@ -193,15 +192,7 @@ export default function FiberOpticsInteractive() {
 
             <button onClick={() => {
                   setWinner("");
-                  setFiberOffset(0);
-                  setCopperOffset(0);
-            
-                  requestAnimationFrame(() => {
-                      requestAnimationFrame(() => {
-                          setFiberOffset(400);
-                          setCopperOffset(400);
-                      });
-                  });
+                  setRaceKey(k => k + 1);
               
                   setTimeout(() => {setWinner("Fiber reached the destination first.");}, 700);
                   }}
@@ -229,10 +220,17 @@ export default function FiberOpticsInteractive() {
                   </text>
               
                   <line x1="70" y1="18" x2="470" y2="18" stroke="#bfa27a" strokeWidth="3"/>
-                  <g
-                      style={{transform: `translateX(${copperOffset}px)`, transition: "transform 3s linear",}}
-                  >
-                      <circle cx="70" cy="18"r="5" fill="#7a5030"/>
+                  <g key={`copper-${raceKey}`}>
+                    <circle cx="70" cy="18" r="5" fill="#7a5030">
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        from="0 0"
+                        to="400 0"
+                        dur="3s"
+                        fill="freeze"
+                      />
+                    </circle>
                   </g>
                   
 
@@ -243,10 +241,17 @@ export default function FiberOpticsInteractive() {
                   </text>
               
                   <line x1="70" y1="54" x2="470" y2="54" stroke="#8cc8e8" strokeWidth="3"/>
-                  <g
-                      style={{transform: `translateX(${fiberOffset}px)`, transition: "transform 0.7s linear",}}
-                  >
-                      <circle cx="70" cy="54" r="5" fill="#3a7a96"/>
+                  <g key={`fiber-${raceKey}`}>
+                    <circle cx="70" cy="54" r="5" fill="#3a7a96">
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        from="0 0"
+                        to="400 0"
+                        dur="0.7s"
+                        fill="freeze"
+                      />
+                    </circle>
                   </g>
   
                 
