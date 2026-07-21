@@ -21,15 +21,15 @@ This project dives into the history of networking to show how humans have stayed
 
 ## Interactive Element: The Data Ride
 
-To make the exhibit interactive, we're building a virtual "theme park ride". Instead of just reading an article, the user actually acts as a piece of "Data" traveling through different eras of communication. As the user progresses along the track, they will trigger animations, audio clips, and interactive prompts specific to that time period.
+To make the exhibit interactive, we're building a virtual "journey". Instead of just reading an article, the user actually acts as a piece of "Data" traveling through different eras of communication. As the user progresses along the website, they will trigger animations, audio clips, and interactive prompts specific to that time period.
 
 Here is a breakdown of the five eras visitors will travel through:
 
 * **The Mail Era (Physical):** Users have to pick whether their data (a letter) ships by land, boat, or plane to see how the choice affects transfer speeds.
-* **The Telephone Era (Switchboards):** The user will hear a phone ring and must choose to accept or decline the call to hear a simulated voice message.
+* **The Telephone Era (Switchboards):** The user will see a phone prompt and must choose to accept or decline the call.
 * **The Internet Era (Modems):** A prompt to connect to the internet, complete with the classic screeching dial-up sound.
 * **The Fiber Optic Era (Underwater Cables):** Users will make a technical routing choice between older copper wiring and modern optical cables.
-* **The Wi-Fi Era (Wireless):** A simulated social media video call taking place over a wireless connection.
+* **The Wi-Fi Era (Wireless):** A simulated wifi strength meter, where users may experiment with different aspect affecting signal strength.
 
 
 ## Concepts to be discussed [Revised]
@@ -108,7 +108,14 @@ One of our discussions centered on how users should navigate the exhibit.
 
 **Final Decision**
 
-We chose a single-page interactive experience where users continuously travel through every communication era.
+We chose a multi-page interactive experience where users continuously travel through every communication era.
+
+### AI Usage Declaration
+
+Artificial intelligence (AI) tools and large language models (LLMs) were used in the development of this project in the following ways:
+- Code Debugging Assistance
+- UI and text formatting
+- Code Consistency and organization
 
 ---
 
@@ -128,9 +135,9 @@ Another idea was allowing users to travel through history using a time machine.
 
 Although visually interesting, it shifted the focus away from networking and communication technologies.
 
-### Theme Park Ride (Final Concept)
+### Travelling through eras (Final Concept)
 
-We ultimately chose a virtual ride where users become the message being transmitted through history.
+We ultimately chose a virtual journey where users become the message being transmitted through history.
 
 This concept was selected because it:
 - Makes learning interactive.
@@ -249,6 +256,19 @@ Throughout development, several ideas were considered but ultimately not impleme
 
 Developing this project taught us that educational experiences become significantly more engaging when users actively participate instead of passively reading information. Framing the visitor as the message itself transformed the project into a more immersive learning experience while making networking concepts easier to understand.
 
+
 We also learned the importance of iterative design. Through continuous discussions, revisions, and testing, we refined both the educational content and the user experience. Maintaining consistency across every communication era, carefully balancing interactivity with educational value, and designing for multiple devices all contributed to creating a more effective virtual exhibit.
 
 Overall, the project strengthened our understanding of networking concepts while also improving our collaboration, planning, and web development skills.
+
+---
+### References
+Akamai (n.d.). *What Are Packets?*. Akamai. https://www.akamai.com/glossary/what-are-packets
+
+Colburn, R. (2025, August 28). *Before Mobile Phones: Train Phones, Telegraphs and Other Mobile Communications*. IEEE Insight. https://insight.ieeeusa.org/articles/before-mobile-phones-train-phones-telegraphs-and-other-mobile-communications/
+
+Incognito (2017, July 11). *A Brief History of Data Communications*. Incgonito. https://www.incognito.com/blog/a-brief-history-of-data-communications-2/
+
+Pahlavan, K., Krishnamurthy, P. (2020, November 19). *Evolution and Impact of Wi-Fi Technology and Applications: A Historical Perspective*. Springer Nature Link. https://link.springer.com/article/10.1007/s10776-020-00501-8
+
+Senko (n.d). *The Evolution of Data Transmission: Why Fiber is Replacing Copper at the Chip Level*. Senko. https://www.senko.com/the-evolution-of-data-transmission-why-fiber-is-replacing-copper-at-the-chip-level/
