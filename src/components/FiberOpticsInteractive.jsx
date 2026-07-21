@@ -39,7 +39,8 @@ export default function FiberOpticsInteractive() {
   const [activeWl, setActiveWl] = useState(null);
   const [pulseKey, setPulseKey] = useState(0);
   const [view, setView] = useState("wdm");
-  const [raceKey, setRaceKey] = useState(0);
+  const [fiberOffset, setFiberOffset] = useState(0);
+  const [copperOffset, setCopperOffset] = useState(0);
   const [winner, setWinner] = useState("");
 
   function sendPulse(id) {
@@ -192,11 +193,19 @@ export default function FiberOpticsInteractive() {
 
             <button onClick={() => {
                   setWinner("");
-                  setRaceKey(k => k + 1);
-              
+                  setFiberOffset(0);
+                  setCopperOffset(0);
+
+                  requestAnimationFrame(() => {
+                      requestAnimationFrame(() => {
+                          setFiberOffset(400);
+                          setCopperOffset(400);
+                      });
+                  });
+
                   setTimeout(() => {setWinner("Fiber reached the destination first.");}, 700);
                   }}
-            
+
                   style={{
                       padding:"0.45rem .9rem",
                       border:"1px solid #c4d0da",
@@ -206,56 +215,42 @@ export default function FiberOpticsInteractive() {
                       fontSize:"0.75rem",
                       marginBottom:"1rem"
                   }}
-              
+
             >
               Send Data
             </button>
 
             <div style={{background: "#fff", border: "1px solid #c4d0da", padding: "1rem", marginBottom: "1rem",}}>
                 <svg viewBox="0 0 500 80" style={{ width: "100%" }}>
-              
+
                   {/* Copper */}
                   <text x="0" y="22" fontSize="10" fill="#7a5030">
                     Copper
                   </text>
-              
-                  <line x1="70" y1="18" x2="470" y2="18" stroke="#bfa27a" strokeWidth="3"/>
-                  <g key={`copper-${raceKey}`}>
-                    <circle cx="70" cy="18" r="5" fill="#7a5030">
-                      <animateTransform
-                        attributeName="transform"
-                        type="translate"
-                        from="0 0"
-                        to="400 0"
-                        dur="3s"
-                        fill="freeze"
-                      />
-                    </circle>
-                  </g>
-                  
 
-            
+                  <line x1="70" y1="18" x2="470" y2="18" stroke="#bfa27a" strokeWidth="3"/>
+                  <g
+                      style={{transform: `translateX(${copperOffset}px)`, transition: "transform 3s linear",}}
+                  >
+                      <circle cx="70" cy="18"r="5" fill="#7a5030"/>
+                  </g>
+
+
+
                   {/* Fiber */}
                   <text x="0" y="58" fontSize="10" fill="#3a7a96">
                     Fiber
                   </text>
-              
+
                   <line x1="70" y1="54" x2="470" y2="54" stroke="#8cc8e8" strokeWidth="3"/>
-                  <g key={`fiber-${raceKey}`}>
-                    <circle cx="70" cy="54" r="5" fill="#3a7a96">
-                      <animateTransform
-                        attributeName="transform"
-                        type="translate"
-                        from="0 0"
-                        to="400 0"
-                        dur="0.7s"
-                        fill="freeze"
-                      />
-                    </circle>
+                  <g
+                      style={{transform: `translateX(${fiberOffset}px)`, transition: "transform 0.7s linear",}}
+                  >
+                      <circle cx="70" cy="54" r="5" fill="#3a7a96"/>
                   </g>
-  
-                
-                  
+
+
+
                 </svg>
 
                {winner && (
