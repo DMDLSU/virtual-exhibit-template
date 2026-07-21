@@ -29,12 +29,18 @@ const css = `
     from { opacity: 0; }
     to   { opacity: 1; }
   }
-`;
+  @keyframes race-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  `;
 
 export default function FiberOpticsInteractive() {
   const [activeWl, setActiveWl] = useState(null);
   const [pulseKey, setPulseKey] = useState(0);
+  const [raceKey, setRaceKey] = useState(0);
   const [view, setView] = useState("wdm");
+  const [winner, setWinner] = useState("");
 
   function sendPulse(id) {
     setActiveWl(id);
@@ -183,6 +189,60 @@ export default function FiberOpticsInteractive() {
               per distance. Copper loses 3 dB every 100 m. Fiber loses just 0.2 dB per kilometer,
               allowing spans of 80 km without a repeater.
             </p>
+
+            <button onClick={() => {
+                  setWinner("");              
+                  setRaceKey(k => k + 1);              
+                  setTimeout(() => {              
+                      setWinner("Fiber reached the destination first.");},700);}}
+            
+                  style={{
+                      padding:"0.45rem .9rem",
+                      border:"1px solid #c4d0da",
+                      background:"#fff",
+                      color:"#3a7a96",
+                      cursor:"pointer",
+                      fontSize:"0.75rem",
+                      marginBottom:"1rem"
+                  }}
+              
+            >
+              Send Data
+            </button>
+
+            <div style={{background: "#fff", border: "1px solid #c4d0da", padding: "1rem", marginBottom: "1rem",}}>
+                <svg viewBox="0 0 500 80" style={{ width: "100%" }}>
+              
+                  {/* Copper */}
+                  <text x="0" y="22" fontSize="10" fill="#7a5030">
+                    Copper
+                  </text>
+              
+                  <line x1="70" y1="18" x2="470" y2="18" stroke="#bfa27a" strokeWidth="3"/>
+              
+                  <circle key={`copper-${raceKey}`} cx="70" cy="18" r="5" fill="#7a5030">
+                  <animate attributeName="cx" from="70" to="470" dur="3s" fill="freeze"/>
+                  </circle>
+                  
+                  {/* Fiber */}
+                  <text x="0" y="58" fontSize="10" fill="#3a7a96">
+                    Fiber
+                  </text>
+              
+                  <line x1="70" y1="54" x2="470" y2="54" stroke="#8cc8e8" strokeWidth="3"/>
+              
+                  <circle key={`fiber-${raceKey}`} cx="70" cy="54" r="5" fill="#3a7a96">
+                  <animate attributeName="cx" from="70" to="470" dur="0.7s" fill="freeze"/>
+                  </circle>
+                  
+                </svg>
+
+               {winner && (
+                <div style={{marginTop: "0.75rem", color: "#3a7a96", fontSize: "0.75rem", animation: "race-fade .2s ease",}}>
+                  ✓ {winner}
+                </div>)}
+              </div>
+
 
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.78rem", background: "#fff", border: "1px solid #c4d0da" }}>
               <thead>
