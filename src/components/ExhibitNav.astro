@@ -7,6 +7,7 @@ interface Props {
   currentChapter: number;
   totalChapters: number;
 }
+import WarpTransition from "./Transition.jsx";
 
 const { prevUrl, prevTitle, nextUrl, nextTitle, currentChapter, totalChapters } = Astro.props;
 ---
@@ -14,10 +15,13 @@ const { prevUrl, prevTitle, nextUrl, nextTitle, currentChapter, totalChapters } 
 <nav class="exhibit-nav">
   <div class="nav-button prev-container">
     {prevUrl && (
-      <a href={prevUrl} class="nav-link prev">
+      <WarpTransition client:load href={prevUrl}>
+      <div class="nav-link prev">
         <span class="label">← Previous</span>
         <span class="title">{prevTitle}</span>
       </a>
+      </div>
+      </WarpTransition>
     )}
   </div>
 
@@ -27,10 +31,13 @@ const { prevUrl, prevTitle, nextUrl, nextTitle, currentChapter, totalChapters } 
 
   <div class="nav-button next-container">
     {nextUrl && (
-      <a href={nextUrl} class="nav-link next">
+      <WarpTransition client:load href={nextUrl}>
+      <div class="nav-link next">
         <span class="label">Next →</span>
         <span class="title">{nextTitle}</span>
       </a>
+      </div>
+      </WarpTransition>
     )}
   </div>
 </nav>
